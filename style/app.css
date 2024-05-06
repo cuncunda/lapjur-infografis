@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* warna
+ */
+
+body{
+    font-family: "Silkscreen", sans-serif;
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header.container {
+    width: 100%;
+    /* max-width: 1200px; */
+    /* margin: 15px; */
+    align-items: center;
+    top: 0;
+    z-index: 9999;
+    /* padding: 10px; */
+    /* background-color: #ffb703; */
+    display: inline;
+    position: sticky;
+  }
+
+header.container .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+header.container .logo {
+    display: flex;
+    margin: 10px 0 5px 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+header.container .nav-list {
+  background-color: #fca311;
+  width: 100%;
+  position: sticky;
+}
+
+header.container .logo h1.f-name {
+    color: white;
+}
+
+header.container .logo h1.l-name {
+    color: #14213d;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+header.container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    /* margin-top: 5px; */
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    gap: 2rem 1rem;
+  }
+   
+header.container .nav-list li {
+    list-style-type: none;
+  }
+   
+header.container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black; 
+    transition: all 0.2s ease-in-out;
+  }
+
+header.container .nav-list li:hover a {
+    background-color: #14213d;
+    color: white;
+    font-size: 1.5em;
+    transition: ease-in-out .3s;
+  }
+
+
+.title {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #023047;
+    padding: 10px;
+    /* position: sticky; */
+}
+
+/* konten */
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  background-color: #eaeaea;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.description {
+  font-family: "Kode Mono", monospace;
+  text-align: center;
+  word-spacing: 5px;
+
+}
+
+.desc {
+  text-decoration: none;
+  color: #14213d;
+  background-color: #fca311;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.desc:hover{
+  background-color: #14213d;
+  color: white;
+  font-size: 1.5em;
+  transition: ease-in-out .3s;
+}
+
+main {
+  padding: 20px;
+  /* overflow: auto; */
+}
+
+hr {
+  font-size: large;
+}
+
+article .sub-title{
+  text-align: center;
+}
+
+.desc{
+  text-align: center;
+  align-items: center;
+}
+
+
+.price-list header {
+  text-align: center;
+  align-items:center ;
+}
+
+.img-game {
+  gap: 20px;
+  display: flex;
+}
+
+.img-aside-fifa {
+  width: 100px;
+  border: 1px solid none;
+  border-radius: 8px;
+  background-color: #023047;
+  padding: 5px;
+}
+
+.img-aside-ninja {
+  width: 100px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+
+#content {
+  float: right;
+  width: 75%;
+}
+
+#x-content {
+ background-color: #eaeaea;
+ float: left;
+ width: 25%;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+ border-radius: 5px;
+ padding-left: 20px;
+ margin-top: 20px;
+}
+
+
+#x-content {
+  align-items: center;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.sosmed {
+  text-align: center;
+  margin: 15px;
+}
+
+.sosmed a{
+  text-decoration: none;
+  color: #023047;
+}
+
+footer {
+  padding: 10px;
+  color: white;
+  background-color: #023047;
+  text-align: center;
+  align-items: center;
+  font-weight: lighter;
+}
+
+#xx-content{
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  header.container {
+    flex-direction: column;
+  }
+  header.container .nav-list ul {
+      flex-wrap: wrap;
+      column-gap: 0.5rem;
+    }
+    main .content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    main {
+      padding: 1rem 3rem;
+    }
+
+    #content, #x-content {
+      width: 100%;
+      padding: 0;
+    }
+
+    main .content p {
+      font-size: 1rem;
+    }
+
+    main .content .featured-image {
+      order: -1;
+    }
+}
